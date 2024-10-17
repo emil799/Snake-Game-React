@@ -162,8 +162,8 @@ button {
 /* Медиен запитване за екрани между 600 и 1400 пиксела */
 @media screen and (max-width: 1400px) and (min-width: 600px) {
   .grid {
-    grid-template-columns: repeat(20, 25px);
-    grid-template-rows: repeat(20, 25px);
+    grid-template-columns: repeat(20, 20px);
+    grid-template-rows: repeat(20, 20px);
   }
 
   .cell {
