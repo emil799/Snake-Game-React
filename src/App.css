@@ -139,13 +139,13 @@ button {
 /* Медиен запитване за екрани с ширина до 600 пиксела */
 @media only screen and (max-width: 600px) {
   .grid {
-    grid-template-columns: repeat(20, 20px);
-    grid-template-rows: repeat(20, 20px);
+    grid-template-columns: repeat(20, 10px);
+    grid-template-rows: repeat(20, 10px);
   }
 
   .cell {
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
   }
 
   button {
@@ -162,13 +162,13 @@ button {
 /* Медиен запитване за екрани между 600 и 1400 пиксела */
 @media screen and (max-width: 1400px) and (min-width: 600px) {
   .grid {
-    grid-template-columns: repeat(20, 20px);
-    grid-template-rows: repeat(20, 20px);
+    grid-template-columns: repeat(20, 15px);
+    grid-template-rows: repeat(20, 15px);
   }
 
   .cell {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
   }
 
   button {
