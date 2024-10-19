@@ -1,4 +1,3 @@
-import logo from './logo.png';
 import React, { useState, useEffect } from "react";  // Добавяне на useState и useEffect
 import './App.css';
 
@@ -21,7 +20,6 @@ function App() {
   const [isGameOver, setIsGameOver] = useState(false);
   const [currentScore, setCurrentScore] = useState(0);
   const [bestScore, setBestScore] = useState(() => {
-    // Взимане на най-високия резултат от localStorage
     const savedBestScore = localStorage.getItem("bestScore");
     return savedBestScore ? parseInt(savedBestScore) : 0;
   });
@@ -88,10 +86,10 @@ function App() {
         if (segment.x === head.x && segment.y === head.y) {
           setBestScore(prevBestScore => {
             const newBestScore = Math.max(prevBestScore, currentScore);
-            localStorage.setItem("bestScore", newBestScore); // Запазване на най-високия резултат
+            localStorage.setItem("bestScore", newBestScore);
             return newBestScore;
           });
-          setCurrentScore(0); // Нулиране на текущия резултат
+          setCurrentScore(0);
           setIsGameOver(true);
           return;
         }
@@ -100,18 +98,20 @@ function App() {
 
     // Проверка дали змията яде ябълка
     if (head.x === apple.x && head.y === apple.y) {
-      const newScore = currentScore + 10; // Изчисляване на новия резултат
+      const newScore = currentScore + 10;
       if (newScore <= MAX_SCORE) {
-        setCurrentScore(newScore); // Увеличаване на текущия резултат с 10
+        setCurrentScore(newScore);
       }
       if (newScore === MAX_SCORE) {
-        setIsGameOver(true); // Спрете играта, когато достигнете максималния резултат
+        setBestScore(newScore);
+        localStorage.setItem("bestScore", newScore);
+        setIsGameOver(true);
       }
       setApple(generateApple());
     } else {
-      newSnake.pop(); // Змията се движи (не расте, ако не яде ябълка)
+      newSnake.pop();
     }
-
+  
     setSnake(newSnake);
   }
 

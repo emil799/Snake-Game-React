@@ -1,41 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 *{
   user-select: none;
   -webkit-user-drag: none;
@@ -139,13 +101,13 @@ button {
 /* Медиен запитване за екрани с ширина до 600 пиксела */
 @media only screen and (max-width: 600px) {
   .grid {
-    grid-template-columns: repeat(20, 10px);
-    grid-template-rows: repeat(20, 10px);
+    grid-template-columns: repeat(20, 12.5px);
+    grid-template-rows: repeat(20, 12.5px);
   }
 
   .cell {
-    width: 10px;
-    height: 10px;
+    width: 12.5px;
+    height: 12.5px;
   }
 
   button {
@@ -162,13 +124,13 @@ button {
 /* Медиен запитване за екрани между 600 и 1400 пиксела */
 @media screen and (max-width: 1400px) and (min-width: 600px) {
   .grid {
-    grid-template-columns: repeat(20, 15px);
-    grid-template-rows: repeat(20, 15px);
+    grid-template-columns: repeat(20, 17px);
+    grid-template-rows: repeat(20, 17px);
   }
 
   .cell {
-    width: 15px;
-    height: 15px;
+    width: 17px;
+    height: 17px;
   }
 
   button {
